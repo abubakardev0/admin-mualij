@@ -1,0 +1,24 @@
+.mood_container {
+  width: fit-content;
+  height: auto;
+  border: 2px solid #252525;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+.mood_emoji_heading {
+  text-align: center;
+  font-size: large;
+}
+
+.mood_emoji_list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+.mood_emoji_list > li > button {
+  background: none;
+  border: none;
+  font-size: 28px;
+}
