@@ -1,14 +1,26 @@
 import React from "react";
 import "./App.css";
-import Table from "./components/Table/Table";
-import Chart from "./components/PieChart/PieChart";
+import { useState } from "react";
+import Alert from "./components/Alert/Alert";
+import Error from "./components/Error/Error";
+import NotFound from "./components/NotFound/404";
 
 function App() {
+  const [show, setShow] = useState(true);
+  const [alert, setAlert] = useState({
+    type: "error",
+    message: "Got IT rfef erf erfr fr",
+  });
   return (
     <>
       <div className="container">
-        {/* <Table data={data} rowsPerPage={6} /> */}
-        <Chart />
+        {/* <Alert
+          show={show}
+          setShow={setShow}
+          type={alert.type}
+          message={alert.message}
+        /> */}
+        {/* <Error /> */}
       </div>
     </>
   );

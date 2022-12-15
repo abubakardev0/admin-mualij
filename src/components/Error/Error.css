@@ -1,0 +1,14 @@
+.error-component {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-content: center;
+  background: none;
+  border: none;
+}
+
+.error-icon {
+  height: 4rem;
+  width: 4rem;
+  place-self: center;
+}

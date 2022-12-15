@@ -1,0 +1,46 @@
+.alert-popup {
+  min-width: fit-content;
+  width: 250px;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  position: fixed;
+  bottom: -2.5rem;
+  right: 0.5rem;
+  z-index: 9999;
+  padding: 1rem 1.25rem;
+}
+.success {
+  color: #22c55e;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+}
+.error {
+  color: #ef4444;
+  background-color: #fecaca;
+  border: 1px solid #f87171;
+}
+
+.alert-type {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.alert_message {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+.alert-close-btn {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.alert-close-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: currentColor;
+}
