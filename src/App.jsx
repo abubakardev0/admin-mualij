@@ -1,28 +1,34 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import Alert from "./components/Alert/Alert";
-import Error from "./components/Error/Error";
-import NotFound from "./components/NotFound/404";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 function App() {
-  const [show, setShow] = useState(true);
-  const [alert, setAlert] = useState({
-    type: "error",
-    message: "Got IT rfef erf erfr fr",
-  });
+  const [value, onChange] = useState(new Date());
+  const appont = new Date(value.getTime() + 9 * 60 * 60 * 1000);
+  console.log(
+    appont.toLocaleDateString("en-US", {
+      hour12: true,
+      hour: "numeric",
+      minute: "numeric",
+    })
+  );
+  const rem = appont / 1000 - new Date().getTime() / 1000;
+
+  const ShowCounter = () => {
+    let countDown = Number(rem);
+    const days = Math.floor(countDown / (3600 * 24));
+    const hours = Math.floor((countDown % (3600 * 24)) / 3600);
+    const minutes = Math.floor((countDown % 3600) / 60);
+    const seconds = Math.floor(countDown % 60);
+    console.log(days, hours, minutes, seconds);
+  };
   return (
-    <>
-      <div className="container">
-        {/* <Alert
-          show={show}
-          setShow={setShow}
-          type={alert.type}
-          message={alert.message}
-        /> */}
-        {/* <Error /> */}
-      </div>
-    </>
+    <div>
+      <Calendar onChange={onChange} value={value} />
+      <button onClick={ShowCounter}>Click</button>
+    </div>
   );
 }
 
